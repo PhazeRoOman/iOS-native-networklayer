@@ -20,6 +20,10 @@
 		4E9446E6289633D50051B66C /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9446E5289633D50051B66C /* Endpoint.swift */; };
 		4E9446E82896346F0051B66C /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9446E72896346F0051B66C /* HTTPMethod.swift */; };
 		4E9446EA289634F10051B66C /* BaseNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9446E9289634F10051B66C /* BaseNetworkService.swift */; };
+		4E9446EC289639BE0051B66C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9446EB289639BE0051B66C /* Request.swift */; };
+		4E9446EE28963A1B0051B66C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9446ED28963A1A0051B66C /* NetworkService.swift */; };
+		4E9446F128963CDD0051B66C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9446F028963CDD0051B66C /* UserModel.swift */; };
+		4E9446F428963D940051B66C /* LoginExampleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9446F328963D940051B66C /* LoginExampleEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		4E9446E5289633D50051B66C /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		4E9446E72896346F0051B66C /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		4E9446E9289634F10051B66C /* BaseNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkService.swift; sourceTree = "<group>"; };
+		4E9446EB289639BE0051B66C /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		4E9446ED28963A1A0051B66C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		4E9446F028963CDD0051B66C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		4E9446F328963D940051B66C /* LoginExampleEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExampleEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +115,8 @@
 		4E9446B0289630160051B66C /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				4E9446F228963D740051B66C /* MyAPI */,
+				4E9446EF28963CCA0051B66C /* Model */,
 				4E9446E1289632620051B66C /* Network */,
 				4E9446B1289630160051B66C /* AppDelegate.swift */,
 				4E9446B3289630160051B66C /* SceneDelegate.swift */,
@@ -151,8 +161,26 @@
 				4E9446E5289633D50051B66C /* Endpoint.swift */,
 				4E9446E72896346F0051B66C /* HTTPMethod.swift */,
 				4E9446E9289634F10051B66C /* BaseNetworkService.swift */,
+				4E9446EB289639BE0051B66C /* Request.swift */,
+				4E9446ED28963A1A0051B66C /* NetworkService.swift */,
 			);
 			path = NetworkRequest;
+			sourceTree = "<group>";
+		};
+		4E9446EF28963CCA0051B66C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E9446F028963CDD0051B66C /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4E9446F228963D740051B66C /* MyAPI */ = {
+			isa = PBXGroup;
+			children = (
+				4E9446F328963D940051B66C /* LoginExampleEndpoint.swift */,
+			);
+			path = MyAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,12 +314,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E9446F428963D940051B66C /* LoginExampleEndpoint.swift in Sources */,
 				4E9446E4289633390051B66C /* RequestErrors.swift in Sources */,
+				4E9446EC289639BE0051B66C /* Request.swift in Sources */,
 				4E9446B6289630160051B66C /* ViewController.swift in Sources */,
 				4E9446E82896346F0051B66C /* HTTPMethod.swift in Sources */,
+				4E9446EE28963A1B0051B66C /* NetworkService.swift in Sources */,
 				4E9446EA289634F10051B66C /* BaseNetworkService.swift in Sources */,
 				4E9446B2289630160051B66C /* AppDelegate.swift in Sources */,
 				4E9446B4289630160051B66C /* SceneDelegate.swift in Sources */,
+				4E9446F128963CDD0051B66C /* UserModel.swift in Sources */,
 				4E9446E6289633D50051B66C /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
