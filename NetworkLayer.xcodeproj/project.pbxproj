@@ -17,6 +17,8 @@
 		4E9446D32896301A0051B66C /* NetworkLayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9446D22896301A0051B66C /* NetworkLayerUITests.swift */; };
 		4E9446D52896301A0051B66C /* NetworkLayerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9446D42896301A0051B66C /* NetworkLayerUITestsLaunchTests.swift */; };
 		4E9446E4289633390051B66C /* RequestErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9446E3289633380051B66C /* RequestErrors.swift */; };
+		4E9446E6289633D50051B66C /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9446E5289633D50051B66C /* Endpoint.swift */; };
+		4E9446E82896346F0051B66C /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9446E72896346F0051B66C /* HTTPMethod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		4E9446D22896301A0051B66C /* NetworkLayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerUITests.swift; sourceTree = "<group>"; };
 		4E9446D42896301A0051B66C /* NetworkLayerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4E9446E3289633380051B66C /* RequestErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestErrors.swift; sourceTree = "<group>"; };
+		4E9446E5289633D50051B66C /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		4E9446E72896346F0051B66C /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				4E9446E3289633380051B66C /* RequestErrors.swift */,
+				4E9446E5289633D50051B66C /* Endpoint.swift */,
+				4E9446E72896346F0051B66C /* HTTPMethod.swift */,
 			);
 			path = NetworkRequest;
 			sourceTree = "<group>";
@@ -279,8 +285,10 @@
 			files = (
 				4E9446E4289633390051B66C /* RequestErrors.swift in Sources */,
 				4E9446B6289630160051B66C /* ViewController.swift in Sources */,
+				4E9446E82896346F0051B66C /* HTTPMethod.swift in Sources */,
 				4E9446B2289630160051B66C /* AppDelegate.swift in Sources */,
 				4E9446B4289630160051B66C /* SceneDelegate.swift in Sources */,
+				4E9446E6289633D50051B66C /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
