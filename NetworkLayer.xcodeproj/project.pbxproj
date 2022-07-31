@@ -19,6 +19,7 @@
 		4E9446E4289633390051B66C /* RequestErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9446E3289633380051B66C /* RequestErrors.swift */; };
 		4E9446E6289633D50051B66C /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9446E5289633D50051B66C /* Endpoint.swift */; };
 		4E9446E82896346F0051B66C /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9446E72896346F0051B66C /* HTTPMethod.swift */; };
+		4E9446EA289634F10051B66C /* BaseNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9446E9289634F10051B66C /* BaseNetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		4E9446E3289633380051B66C /* RequestErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestErrors.swift; sourceTree = "<group>"; };
 		4E9446E5289633D50051B66C /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		4E9446E72896346F0051B66C /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		4E9446E9289634F10051B66C /* BaseNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				4E9446E3289633380051B66C /* RequestErrors.swift */,
 				4E9446E5289633D50051B66C /* Endpoint.swift */,
 				4E9446E72896346F0051B66C /* HTTPMethod.swift */,
+				4E9446E9289634F10051B66C /* BaseNetworkService.swift */,
 			);
 			path = NetworkRequest;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				4E9446E4289633390051B66C /* RequestErrors.swift in Sources */,
 				4E9446B6289630160051B66C /* ViewController.swift in Sources */,
 				4E9446E82896346F0051B66C /* HTTPMethod.swift in Sources */,
+				4E9446EA289634F10051B66C /* BaseNetworkService.swift in Sources */,
 				4E9446B2289630160051B66C /* AppDelegate.swift in Sources */,
 				4E9446B4289630160051B66C /* SceneDelegate.swift in Sources */,
 				4E9446E6289633D50051B66C /* Endpoint.swift in Sources */,
