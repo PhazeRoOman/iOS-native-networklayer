@@ -18,6 +18,7 @@ class HTTPClient {
             request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: [])
         }
         do {
+            // TODO: Simplify the code of checking the iOS version
             if #available(iOS 15.0, *) {
                 let (data, response) = try await URLSession.shared.data(for: request, delegate: nil)
                 
@@ -34,38 +35,54 @@ class HTTPClient {
                     }
                 case 401:
                     return .failure(.unathorized)
+                case 404:
+                    return .failure(.notFound)
                 default:
                     return .failure(.unknown)
                 }
                 
             } else {
-                
-                let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                    print("data: \(data), response: \(response), error:\(error)")
-                    if let httpResponse = response as? HTTPURLResponse, let data = data {
-                        print("Status Code: \(httpResponse.statusCode)")
-                        
-                        switch httpResponse.statusCode {
-                        case 200...204:
-                            do {
-                                let decodedResponse = try JSONDecoder().decode(T.self, from: data)
-                                return .success(decodedResponse)
-                            } catch _ {
-                                return .failure(.decode)
-                            }
-                        case 401:
-                            return .failure(.unathorized)
-                        default:
-                            return .failure(.unknown)
-                        }
-                    }
+                let (data, response) = try await URLSession.shared.data(from: request)
+                guard let response = response as? HTTPURLResponse else {
+                    return .failure(.noResponse)
                 }
-                task.resume()
+                switch response.statusCode {
+                case 200...204:
+                    do {
+                        let decodedResponse = try JSONDecoder().decode(T.self, from: data)
+                        return .success(decodedResponse)
+                    } catch _ {
+                        return .failure(.decode)
+                    }
+                case 401:
+                    return .failure(.unathorized)
+                case 404:
+                    return .failure(.notFound)
+                default:
+                    print("response.statusCode = \(response.statusCode)")
+                    return .failure(.defaultCase)
+                }
             }
 
         } catch {
             return .failure(.unknown)
         }
-        return .failure(.noResponse)
+    }
+}
+extension URLSession {
+    @available(iOS, deprecated: 15.0, message: "This extension is no longer necessary. Use API built into SDK")
+    func data(from url: URLRequest) async throws -> (Data, URLResponse) {
+        try await withCheckedThrowingContinuation { continuation in
+            let task = self.dataTask(with: url) { data, response, error in
+                guard let data = data, let response = response else {
+                    let error = error ?? URLError(.badServerResponse)
+                    return continuation.resume(throwing: error)
+                }
+                
+                continuation.resume(returning: (data, response))
+            }
+            
+            task.resume()
+        }
     }
 }
